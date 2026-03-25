@@ -37,7 +37,6 @@ body {
   margin: 0;
   color: var(--sea-ink);
   font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
-  background-color: var(--bg-base);
   background:
     radial-gradient(1100px 620px at -8% -10%, var(--hero-a), transparent 58%),
     radial-gradient(1050px 620px at 112% -12%, var(--hero-b), transparent 62%),
@@ -123,6 +122,7 @@ code {
 .brand-pill {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   border-radius: 999px;
   border: 1px solid var(--chip-line);
