@@ -1,4 +1,4 @@
-import { intlayer, intlayerProxy } from "vite-intlayer";
+import { intlayer } from "vite-intlayer";
 import { defineConfig } from "vite";
 import { devtools } from "@tanstack/devtools-vite";
 import tailwindcss from "@tailwindcss/vite";
@@ -19,6 +19,6 @@ export default defineConfig({
     }),
     solidPlugin({ ssr: true }),
     intlayer(),
-    intlayerProxy(),
+    // intlayerProxy(),
   ],
 });
