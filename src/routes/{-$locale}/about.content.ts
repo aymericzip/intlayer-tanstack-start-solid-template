@@ -1,4 +1,4 @@
-import { t, type Dictionary } from 'intlayer'
+import { type Dictionary, t } from 'intlayer';
 
 const aboutContent = {
   key: 'about-page',
@@ -15,6 +15,6 @@ const aboutContent = {
       es: 'TanStack Start te ofrece enrutamiento tipado, funciones del servidor y valores SSR modernos. Úsalo como una base limpia, luego agrega tus propias rutas, estilos y complementos.',
     }),
   },
-} satisfies Dictionary
+} satisfies Dictionary;
 
-export default aboutContent
+export default aboutContent;
