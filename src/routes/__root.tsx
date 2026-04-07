@@ -3,7 +3,7 @@ import {
   Outlet,
   Scripts,
   createRootRouteWithContext,
-  useMatches,
+  useParams,
 } from "@tanstack/solid-router";
 import { TanStackRouterDevtools } from "@tanstack/solid-router-devtools";
 import { HydrationScript } from "solid-js/web";
@@ -27,15 +27,10 @@ type Params = {
 };
 
 function RootComponent() {
-  const matches = useMatches();
-
   // Try to find locale in params of any active match
+  const params = useParams({ strict: false });
   // This assumes you use the dynamic segment "/{-$locale}" in your route tree
-  const locale =
-    (
-      matches().find((match) => match.routeId === "/{-$locale}/")
-        ?.params as Params
-    )?.locale ?? defaultLocale;
+  const locale = params()?.locale ?? defaultLocale;
 
   return (
     <html dir={getHTMLTextDir(locale)} lang={locale}>
