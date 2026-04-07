@@ -9,7 +9,8 @@ import { TanStackRouterDevtools } from "@tanstack/solid-router-devtools";
 import { HydrationScript } from "solid-js/web";
 import { Suspense } from "solid-js";
 import { IntlayerProvider } from "solid-intlayer";
-import { defaultLocale, getHTMLTextDir, type Locale } from "intlayer";
+import { defaultLocale, getHTMLTextDir } from "intlayer";
+import { Route as LocaleRoute } from "./{-$locale}/route";
 
 import Header from "../components/Header";
 
@@ -22,14 +23,9 @@ export const Route = createRootRouteWithContext()({
   shellComponent: RootComponent,
 });
 
-type Params = {
-  locale: Locale;
-};
-
 function RootComponent() {
   // Try to find locale in params of any active match
-  const params = useParams({ strict: false });
-  // This assumes you use the dynamic segment "/{-$locale}" in your route tree
+  const params = LocaleRoute.useParams();
   const locale = params()?.locale ?? defaultLocale;
 
   return (
