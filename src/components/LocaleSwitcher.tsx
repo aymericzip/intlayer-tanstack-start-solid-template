@@ -1,9 +1,5 @@
 import { useLocation } from "@tanstack/solid-router";
-import {
-  getLocaleName,
-  getPathWithoutLocale,
-  getPrefix,
-} from "intlayer";
+import { getLocaleName, getPathWithoutLocale, getPrefix } from "intlayer";
 import { For } from "solid-js";
 import { useIntlayer, useLocale } from "solid-intlayer";
 import { Link, type To } from "./LocalizedLink";
@@ -24,7 +20,7 @@ export const LocaleSwitcher = () => {
             <Link
               aria-current={localeEl === locale() ? "page" : undefined}
               aria-label={
-                content().localeSwitcherLabel({
+                content.localeSwitcherLabel({
                   language: getLocaleName(localeEl),
                 }).value
               }
