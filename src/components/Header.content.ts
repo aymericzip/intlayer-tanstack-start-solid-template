@@ -8,6 +8,10 @@ const headerContent = {
     navHome: t({ en: "Home", fr: "Accueil", es: "Inicio" }),
     navAbout: t({ en: "About", fr: "À propos", es: "Acerca de" }),
     navDocs: t({ en: "Docs", fr: "Documentation", es: "Documentación" }),
+
+    aHrefhttpstanstackcomTargetBlankRelnoref: t({
+      en: '<!--/--><a href="https://tanstack.com/start/latest/docs/framework/solid/overview" target="_blank" rel="noreferrer" class="nav-link">',
+    }),
   },
 } satisfies Dictionary;
 

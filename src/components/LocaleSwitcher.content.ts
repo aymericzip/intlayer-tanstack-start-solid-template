@@ -1,21 +1,26 @@
-import { type Dictionary, insert, t } from 'intlayer';
+import { type Dictionary, insert, t } from "intlayer";
 
 const localeSwitcherContent = {
   content: {
     languageListLabel: t({
-      en: 'Language list',
-      es: 'Lista de idiomas',
-      fr: 'Liste de langues',
+      en: "Language list",
+      es: "Lista de idiomas",
+      fr: "Liste de langues",
     }),
+
     localeSwitcherLabel: insert(
       t({
-        en: 'Select language {{language}}',
-        es: 'Seleccionar idioma {{language}}',
-        fr: 'Sélectionner la langue {{language}}',
-      })
+        en: "Select language {{language}}",
+        es: "Seleccionar idioma {{language}}",
+        fr: "Sélectionner la langue {{language}}",
+      }),
     ),
+
+    divClassflexFlexRowGap: t({
+      en: '<div class="flex flex-row gap-2">',
+    }),
   },
-  key: 'locale-switcher',
+  key: "locale-switcher",
 } satisfies Dictionary;
 
 export default localeSwitcherContent;

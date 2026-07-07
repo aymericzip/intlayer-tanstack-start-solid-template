@@ -19,7 +19,7 @@ const localizedPages = localeFlatMap(({ urlPrefix }) =>
 
 export default defineConfig({
   plugins: [
-    intlayerProxy(),
+    intlayerProxy({ ignore: (req: any) => req.url?.startsWith('/api') }),
     devtools(), // this is the plugin that enables path aliases
     tailwindcss(),
     tanstackStart({
@@ -37,7 +37,7 @@ export default defineConfig({
       },
       pages: localizedPages,
     }),
-    solidPlugin({ ssr: true }),
     intlayer(),
+    solidPlugin({ ssr: true }),
   ],
 });
