@@ -1,4 +1,4 @@
-import { intlayer, intlayerProxy } from "vite-intlayer";
+import { intlayer } from "vite-intlayer";
 import { defineConfig } from "vite";
 import { devtools } from "@tanstack/devtools-vite";
 import tailwindcss from "@tailwindcss/vite";
@@ -19,7 +19,6 @@ const localizedPages = localeFlatMap(({ urlPrefix }) =>
 
 export default defineConfig({
   plugins: [
-    intlayerProxy({ ignore: (req: any) => req.url?.startsWith('/api') }),
     devtools(), // this is the plugin that enables path aliases
     tailwindcss(),
     tanstackStart({
@@ -37,7 +36,11 @@ export default defineConfig({
       },
       pages: localizedPages,
     }),
-    intlayer(),
+    intlayer({
+      proxy: {
+        ignore: (req) => req.url?.startsWith("/api"),
+      },
+    }),
     solidPlugin({ ssr: true }),
   ],
 });
