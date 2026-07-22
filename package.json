@@ -16,8 +16,8 @@
     "@tanstack/solid-router-devtools": "^1.167.0",
     "@tanstack/solid-router-ssr-query": "^1.167.1",
     "@tanstack/solid-start": "^1.168.32",
-    "intlayer": "canary",
-    "solid-intlayer": "canary",
+    "intlayer": "latest",
+    "solid-intlayer": "latest",
     "solid-js": "^1.9.14",
     "tailwindcss": "^4.3.3"
   },
@@ -25,7 +25,7 @@
     "@tanstack/devtools-vite": "^0.8.1",
     "typescript": "^7.0.2",
     "vite": "^8.1.5",
-    "vite-intlayer": "canary",
+    "vite-intlayer": "latest",
     "vite-plugin-solid": "^2.11.13"
   },
   "pnpm": {
