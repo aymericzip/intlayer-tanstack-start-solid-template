@@ -11,22 +11,22 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
-    "@tanstack/router-plugin": "^1.168.23",
-    "@tanstack/solid-router": "^1.170.18",
-    "@tanstack/solid-router-devtools": "^1.167.0",
+    "@tanstack/router-plugin": "^1.168.24",
+    "@tanstack/solid-router": "^1.170.19",
+    "@tanstack/solid-router-devtools": "^1.167.1",
     "@tanstack/solid-router-ssr-query": "^1.167.1",
-    "@tanstack/solid-start": "^1.168.32",
+    "@tanstack/solid-start": "^1.168.35",
     "intlayer": "latest",
     "solid-intlayer": "latest",
     "solid-js": "^1.9.14",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@tanstack/devtools-vite": "^0.8.1",
+    "@tanstack/devtools-vite": "^0.8.3",
     "typescript": "^7.0.2",
-    "vite": "^8.1.5",
+    "vite": "^8.2.0",
     "vite-intlayer": "latest",
-    "vite-plugin-solid": "^2.11.13"
+    "vite-plugin-solid": "^2.11.14"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
