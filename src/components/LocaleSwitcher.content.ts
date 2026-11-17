@@ -15,10 +15,6 @@ const localeSwitcherContent = {
         fr: "Sélectionner la langue {{language}}",
       }),
     ),
-
-    divClassflexFlexRowGap: t({
-      en: '<div class="flex flex-row gap-2">',
-    }),
   },
   key: "locale-switcher",
 } satisfies Dictionary;
